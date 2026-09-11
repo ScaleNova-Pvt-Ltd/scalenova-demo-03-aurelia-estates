@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurelia Estates — Architectural Eminence & Turnkey Residences</title>
+  <meta name="description" content="Bespoke architectural estates, ultra-luxury villas, and turnkey commercial headquarters for discerning patrons across India.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FBFBF9'/><circle cx='16' cy='16' r='12' stroke='%23C5A059' stroke-width='2' fill='none'/><text x='16' y='21' font-family='serif' font-size='14' text-anchor='middle' fill='%23C5A059'>A</text></svg>">
+  <link rel="stylesheet" href="src/styles/theme.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">A</div>
+        <div class="brand-title">Aurelia Estates</div>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="properties.html" class="nav-link">Portfolio</a></li>
+          <li><a href="residential.html" class="nav-link">Residential</a></li>
+          <li><a href="commercial.html" class="nav-link">Commercial</a></li>
+          <li><a href="construction.html" class="nav-link">Engineering</a></li>
+          <li><a href="process.html" class="nav-link">Process</a></li>
+          <li><a href="insights.html" class="nav-link">Journal</a></li>
+          <li><a href="contact.html" class="nav-link">Ateliers</a></li>
+        </ul>
+      </nav>
+      <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 20px;">Private Viewing</a>
+    </div>
+  </header>
+
+  <main style="padding-top: var(--header-height);">
+    <!-- Hero -->
+    <section style="position: relative; min-height: 85vh; display: flex; align-items: center; border-bottom: 1px solid var(--color-border); overflow: hidden;">
+      <div style="position: absolute; inset: 0; pointer-events: none; opacity: 0.65; z-index: 1;">
+        <canvas id="heroCanvas" style="width: 100%; height: 100%;"></canvas>
+      </div>
+
+      <div class="container" style="position: relative; z-index: 2; padding: 60px 28px;">
+        <div style="max-width: 760px;">
+          <span class="eyebrow">Architectural Eminence &bull; Turnkey Execution</span>
+          <h1 style="margin-bottom: 24px;">Architecture as a Perpetual Sanctuary</h1>
+          <p style="font-size: 1.25rem; color: var(--color-muted); line-height: 1.7; margin-bottom: 36px; font-weight: 300;">
+            We curate and engineer private estates where classical proportion converges with contemporary structural purity. From single-quarry Italian marble curation to bespoke subterranean wellness vaults.
+          </p>
+          <div style="display: flex; gap: 18px; flex-wrap: wrap;">
+            <a href="properties.html" class="btn btn-gold">Explore Estates</a>
+            <a href="schedule-visit.html" class="btn btn-outline">Request Private Viewing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Metrics -->
+    <section style="padding: 56px 0; background: var(--color-alabaster); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;">
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--color-gold);">₹450 Cr+</div>
+            <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-muted); margin-top: 4px;">Private Assets Under Construction</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--color-gold);">100%</div>
+            <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-muted); margin-top: 4px;">Single-Quarry Natural Stone Traceability</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--color-gold);">38</div>
+            <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-muted); margin-top: 4px;">Private Residencies Handed Over</div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-serif); font-size: 2.8rem; color: var(--color-gold);">Zone II+</div>
+            <div style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-muted); margin-top: 4px;">Seismic Structural Over-Engineering</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curated Estates Preview -->
+    <section style="padding: 96px 0; border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px;">
+          <div>
+            <span class="eyebrow">Signature Portfolio</span>
+            <h2>Current Landmark Developments</h2>
+          </div>
+          <a href="properties.html" style="color: var(--color-gold); text-decoration: none; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase;">View All Estates &rarr;</a>
+        </div>
+
+        <div class="grid-3">
+          <div class="estate-card">
+            <span class="property-badge">WHITEFIELD, BENGALURU</span>
+            <h3 style="margin-bottom: 8px;">The Alabaster Villa</h3>
+            <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 16px;">
+              14,500 sq ft private pavilion residence with monolithic travertine courtyard and infinity reflection pool.
+            </p>
+            <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-gold);">₹28.5 Cr</span>
+              <a href="featured-property.html" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.75rem;">View Dossier</a>
+            </div>
+          </div>
+
+          <div class="estate-card">
+            <span class="property-badge">JUBILEE HILLS, HYDERABAD</span>
+            <h3 style="margin-bottom: 8px;">The Obsidian Pavilion</h3>
+            <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 16px;">
+              18,200 sq ft hillside residence featuring basalt cantilever terraces and temperature-controlled wine vault.
+            </p>
+            <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-gold);">₹36.0 Cr</span>
+              <a href="featured-property.html" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.75rem;">View Dossier</a>
+            </div>
+          </div>
+
+          <div class="estate-card">
+            <span class="property-badge">ALTAMOUNT ROAD, MUMBAI</span>
+            <h3 style="margin-bottom: 8px;">The Solarium Penthouse</h3>
+            <p style="font-size: 0.88rem; color: var(--color-muted); margin-bottom: 16px;">
+              Triplex sky estate with 360-degree Arabian Sea vistas, acoustic chamber salon, and private express elevator.
+            </p>
+            <div style="margin-top: auto; padding-top: 16px; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-gold);">₹62.0 Cr</span>
+              <a href="featured-property.html" class="btn btn-outline" style="padding: 6px 14px; font-size: 0.75rem;">View Dossier</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;">
+        <div>
+          <div style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--color-ivory); margin-bottom: 16px;">AURELIA ESTATES</div>
+          <p style="font-size: 0.85rem; line-height: 1.8; color: #8F8B85; max-width: 320px;">
+            A premier architectural and civil engineering studio crafting residential and commercial sanctums for India's foremost patrons.
+          </p>
+        </div>
+        <div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold); margin-bottom: 16px;">Estates</div>
+          <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
+            <li><a href="properties.html" style="color: inherit; text-decoration: none;">Signature Collection</a></li>
+            <li><a href="residential.html" style="color: inherit; text-decoration: none;">Turnkey Villas</a></li>
+            <li><a href="commercial.html" style="color: inherit; text-decoration: none;">Atelier Workplaces</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold); margin-bottom: 16px;">Services</div>
+          <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
+            <li><a href="construction.html" style="color: inherit; text-decoration: none;">Civil Engineering</a></li>
+            <li><a href="process.html" style="color: inherit; text-decoration: none;">The 7-Stage Process</a></li>
+            <li><a href="schedule-visit.html" style="color: inherit; text-decoration: none;">Private Tour</a></li>
+          </ul>
+        </div>
+        <div>
+          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold); margin-bottom: 16px;">Ateliers</div>
+          <p style="font-size: 0.82rem; line-height: 1.8; color: #8F8B85;">
+            Bangalore &bull; Lavelle Road<br>
+            Hyderabad &bull; Jubilee Hills<br>
+            Mumbai &bull; Altamount Road
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Aurelia Estates & Architecture Ltd. Discretion Guaranteed.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="privacy.html" style="color: inherit; text-decoration: none;">Privacy Governance</a>
+          <span style="color: var(--color-gold);">ScaleNova EliteOS Demo Platform</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { ArchitecturalCanvas } from './src/components/floorplan-depth.js';
+    new ArchitecturalCanvas('heroCanvas');
+  </script>
+</body>
+</html>

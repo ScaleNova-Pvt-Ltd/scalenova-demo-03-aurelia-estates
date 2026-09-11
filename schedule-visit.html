@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule a Private Viewing — Aurelia Estates</title>
+  <meta name="description" content="Request a confidential on-site private viewing and consultation with the senior partners of Aurelia Estates.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FBFBF9'/><circle cx='16' cy='16' r='12' stroke='%23C5A059' stroke-width='2' fill='none'/><text x='16' y='21' font-family='serif' font-size='14' text-anchor='middle' fill='%23C5A059'>A</text></svg>">
+  <link rel="stylesheet" href="src/styles/theme.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-symbol">A</div>
+        <div class="brand-title">Aurelia Estates</div>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="properties.html" class="nav-link">Portfolio</a></li>
+          <li><a href="residential.html" class="nav-link">Residential</a></li>
+          <li><a href="commercial.html" class="nav-link">Commercial</a></li>
+          <li><a href="construction.html" class="nav-link">Engineering</a></li>
+          <li><a href="process.html" class="nav-link">Process</a></li>
+          <li><a href="insights.html" class="nav-link">Journal</a></li>
+          <li><a href="contact.html" class="nav-link">Ateliers</a></li>
+        </ul>
+      </nav>
+      <a href="schedule-visit.html" class="btn btn-gold active" style="padding: 10px 20px;">Private Viewing</a>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px;">
+    <div class="container">
+      <div style="max-width: 840px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 48px;">
+          <span class="eyebrow">Confidential Consultation</span>
+          <h1>Request a Private Estate Viewing</h1>
+          <p style="font-size: 1.15rem; color: var(--color-muted); line-height: 1.7; margin-top: 16px;">
+            To ensure complete discretion and dedicated architectural guidance, viewings are conducted privately by appointment only.
+          </p>
+        </div>
+
+        <div style="background: var(--color-white); border: 1px solid var(--color-border); padding: 48px; box-shadow: 0 12px 32px rgba(0,0,0,0.03);">
+          <form id="visitForm">
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Legal Name *</label>
+                <input type="text" id="fullName" class="form-input" required placeholder="e.g. Vikramaditya Singhal">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Private Email Address *</label>
+                <input type="email" id="email" class="form-input" required placeholder="v.singhal@familyoffice.in">
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="phone">Contact Number *</label>
+                <input type="tel" id="phone" class="form-input" required placeholder="+91 98200 88990">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="companyName">Family Office / Entity Representation</label>
+                <input type="text" id="companyName" class="form-input" placeholder="Singhal Family Office / Private Patron">
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="serviceInterest">Estate Typology *</label>
+                <select id="serviceInterest" class="form-select" required>
+                  <option value="Turnkey Villa Estate">Turnkey Villa Estate (12,000+ sq ft)</option>
+                  <option value="Penthouse Sky Estate">Penthouse Sky Estate</option>
+                  <option value="Bespoke Green-Field Estate">Bespoke Green-Field Architecture</option>
+                  <option value="Corporate Atelier Headquarters">Corporate Atelier Headquarters</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="city">Geographic Location Preference *</label>
+                <select id="city" class="form-select" required>
+                  <option value="Bengaluru (Whitefield / Sadashivanagar)">Bengaluru (Whitefield / Sadashivanagar)</option>
+                  <option value="Hyderabad (Jubilee Hills / Gachibowli)">Hyderabad (Jubilee Hills / Gachibowli)</option>
+                  <option value="Mumbai (Altamount Road / Worli)">Mumbai (Altamount Road / Worli)</option>
+                  <option value="Goa (North Goa Private Enclave)">Goa (North Goa Private Enclave)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="form-group">
+                <label class="form-label" for="budgetRange">Anticipated Capital Allocation *</label>
+                <select id="budgetRange" class="form-select" required>
+                  <option value="₹10 Cr - ₹25 Cr">₹10 Cr - ₹25 Cr</option>
+                  <option value="₹25 Cr - ₹50 Cr">₹25 Cr - ₹50 Cr</option>
+                  <option value="₹50 Cr - ₹100 Cr+">₹50 Cr - ₹100 Cr+</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="timeline">Acquisition / Construction Horizon</label>
+                <select id="timeline" class="form-select">
+                  <option value="Immediate (Within 90 Days)">Immediate (Within 90 Days)</option>
+                  <option value="Medium Term (3 - 9 Months)">Medium Term (3 - 9 Months)</option>
+                  <option value="Strategic Planning (1 Year+)">Strategic Planning (1 Year+)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="projectDescription">Architectural Notes & Desired Amenities</label>
+              <textarea id="projectDescription" class="form-textarea" rows="4" placeholder="Mention bespoke preferences: e.g. subterranean vault, gallery-height ceilings, thermal wine cellar, private security barracks..."></textarea>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--color-border);">
+              <div style="font-size: 0.8rem; color: var(--color-muted); max-width: 440px;">
+                All inquiries are protected by standard non-disclosure protocol and managed under ScaleNova Enterprise CRM.
+              </div>
+              <button type="submit" id="submitBtn" class="btn btn-gold" style="padding: 14px 32px;">
+                Submit Private Request
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Aurelia Estates & Architecture Ltd. Discretion Guaranteed.</div>
+      <div style="color: var(--color-gold);">ScaleNova EliteOS Demo Platform</div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { IntegrationService } from './src/services/api.js';
+
+    const form = document.getElementById('visitForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Submitting Dossier...';
+
+      const formData = {
+        fullName: document.getElementById('fullName').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        companyName: document.getElementById('companyName').value.trim(),
+        serviceInterest: document.getElementById('serviceInterest').value,
+        city: document.getElementById('city').value,
+        budgetRange: document.getElementById('budgetRange').value,
+        timeline: document.getElementById('timeline').value,
+        projectDescription: document.getElementById('projectDescription').value.trim(),
+        leadType: 'Private Viewing Request'
+      };
+
+      try {
+        const result = await IntegrationService.submitLead(formData);
+        IntegrationService.renderConfirmation(document.body, result, formData.fullName);
+        form.reset();
+      } catch (err) {
+        alert('Transmission error. Please call our private desk directly.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Submit Private Request';
+      }
+    });
+  </script>
+</body>
+</html>
