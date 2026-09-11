@@ -1,3 +1,10 @@
+window.DEMO_CONFIG = {
+  demoId: 'DEMO-03',
+  industry: 'Real Estate & Construction',
+  clientName: 'Aurelia Estates',
+  appsScriptUrl: window.APPS_SCRIPT_WEB_APP_URL || 'YOUR_SHARED_APPS_SCRIPT_WEB_APP_URL'
+};
+
 /**
  * ScaleNova EliteOS — Demo 03: Aurelia Estates Configuration
  */

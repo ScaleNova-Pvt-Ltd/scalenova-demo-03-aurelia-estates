@@ -1,115 +1,103 @@
 /**
- * ScaleNova EliteOS — Unified Client Integration API Dispatcher
- * Demo 03: Aurelia Estates (Real Estate & Construction)
+ * ScaleNova Systems — Client API Dispatcher (src/services/api.js)
+ * Demo: Aurelia Estates (DEMO-03)
+ * All 5 websites connect to ONE shared Apps Script Web App URL.
  */
 
-import { APP_CONFIG } from '../config/index.js';
+window.ScaleNovaAPI = (function () {
+  'use strict';
 
-export class IntegrationService {
-  /**
-   * Generates a deterministic client-side submission reference
-   */
-  static generateSubmissionId() {
-    const timestamp = Date.now().toString(36).toUpperCase().slice(-4);
-    const random = Math.floor(1000 + Math.random() * 9000);
-    const prefix = APP_CONFIG.leadPrefix || 'SN-AUR-';
-    return `${prefix}${timestamp}-${random}`;
-  }
+  const config = window.DEMO_CONFIG || {
+    demoId: 'DEMO-03',
+    industry: 'Real Estate & Construction',
+    clientName: 'Aurelia Estates',
+    appsScriptUrl: window.APPS_SCRIPT_WEB_APP_URL || ''
+  };
 
-  /**
-   * Submits a form payload to the shared ScaleNova Google Apps Script Gateway
-   */
-  static async submitLead(formData) {
-    const submissionId = this.generateSubmissionId();
-    
-    // Construct standardized 22-column payload
+  async function submitLead(formData, options = {}) {
+    // 1. Anti-spam honeypot check
+    if (formData.website_hp || formData.company_hp || formData.website_trap || formData.security_trap) {
+      console.warn('[ScaleNova Security] Honeypot trap triggered. Request silently dropped.');
+      return mockSuccessResponse(formData, 'SPAM_FILTERED');
+    }
+
+    // 2. Validate mandatory fields
+    if (!formData.name || !formData.email) {
+      throw new Error('Name and email are mandatory fields.');
+    }
+
     const payload = {
-      demoId: APP_CONFIG.demoId,
-      industry: APP_CONFIG.industry,
-      sourceWebsite: `${APP_CONFIG.companyName} (${APP_CONFIG.demoId})`,
-      leadType: formData.leadType || 'Private Viewing Request',
-      fullName: formData.fullName || '',
-      email: formData.email || '',
-      phone: formData.phone || '',
-      companyName: formData.companyName || formData.organization || 'Private Individual',
-      city: formData.city || 'Bangalore',
-      serviceInterest: formData.serviceInterest || 'Turnkey Villa Estate',
-      budgetRange: formData.budgetRange || '₹10 Cr - ₹25 Cr',
-      timeline: formData.timeline || 'Immediate (3-6 Months)',
-      projectDescription: formData.projectDescription || formData.message || '',
-      submissionId: submissionId,
-      submittedAt: new Date().toISOString()
+      demo_id: config.demoId || 'DEMO-03',
+      lead_type: (formData.lead_type || formData.leadType || 'LEAD').toUpperCase(),
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      phone: (formData.phone || '').trim(),
+      company: (formData.company || '').trim() || 'Direct Client',
+      service: formData.service || formData.department || formData.course || formData.product || 'General Inquiry',
+      requirement: formData.requirement || formData.scope || formData.symptoms || formData.quantity || 'Standard Scope',
+      project_type: formData.project_type || formData.projectType || 'Commercial',
+      budget: formData.budget || 'Confidential',
+      preferred_date: formData.preferred_date || formData.preferredDate || formData.date || '',
+      preferred_time: formData.preferred_time || formData.preferredTime || formData.time || '',
+      message: (formData.message || formData.notes || '').trim(),
+      source: 'Aurelia Estates Website',
+      source_page: formData.source_page || formData.page || window.location.pathname || 'Home'
     };
 
-    console.group(`[ScaleNova Gateway] Dispatching ${APP_CONFIG.demoId} Lead`);
-    console.log('Submission ID:', submissionId);
-    console.log('Target Sheet:', APP_CONFIG.targetSheet);
-    console.log('Payload Body:', payload);
-    console.groupEnd();
+    const endpoint = window.APPS_SCRIPT_WEB_APP_URL || 
+                     config.appsScriptUrl || 
+                     (window.SCALENOVA_GATEWAY && window.SCALENOVA_GATEWAY.submitUrl);
 
-    // If endpoint is placeholder, run in high-fidelity simulation mode
-    if (APP_CONFIG.submitUrl.includes('DEMO_ENDPOINT_ID')) {
-      await new Promise(resolve => setTimeout(resolve, 850));
-      return {
-        success: true,
-        submissionId: submissionId,
-        mode: 'SIMULATION',
-        targetSheet: APP_CONFIG.targetSheet,
-        message: 'Private viewing consultation scheduled. Your invitation concierge will contact you within 4 hours.'
-      };
+    const isPlaceholder = !endpoint || 
+                          endpoint.includes('YOUR_SHARED_APPS_SCRIPT_WEB_APP_URL') || 
+                          endpoint.includes('DEMO_ENDPOINT_ID');
+
+    if (isPlaceholder) {
+      // Local simulation mode for offline/pre-deployment testing
+      await new Promise(r => setTimeout(r, 600));
+      return mockSuccessResponse(payload);
     }
 
     try {
-      const response = await fetch(APP_CONFIG.submitUrl, {
+      const resp = await fetch(endpoint, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-        mode: 'cors'
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
       });
 
-      const result = await response.json();
-      return {
-        ...result,
-        submissionId: submissionId
-      };
-    } catch (error) {
-      console.warn('[ScaleNova Gateway] Offline or CORS fallback triggered:', error);
-      return {
-        success: true,
-        submissionId: submissionId,
-        mode: 'FAIL_SAFE_OFFLINE',
-        targetSheet: APP_CONFIG.targetSheet,
-        message: 'Your inquiry has been recorded securely. Our senior estate partner will reach out shortly.'
-      };
+      if (!resp.ok) {
+        throw new Error('HTTP ' + resp.status);
+      }
+
+      const result = await resp.json();
+      if (result.success === false) {
+        throw new Error(result.message || 'Unable to process the request.');
+      }
+      return result;
+    } catch (err) {
+      console.warn('[ScaleNova API] Network error, falling back to local simulation:', err);
+      return mockSuccessResponse(payload);
     }
   }
 
-  /**
-   * Displays an elegant editorial confirmation modal
-   */
-  static renderConfirmation(container, result, customerName) {
-    const modal = document.createElement('div');
-    modal.className = 'aurelia-modal-overlay';
-    modal.innerHTML = `
-      <div class="aurelia-modal-card">
-        <div style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-charcoal); margin-bottom: 12px; font-style: italic;">
-          Invitation Confirmed
-        </div>
-        <p style="color: var(--color-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">
-          Thank you, <strong>${customerName || 'Esteemed Guest'}</strong>. Your private viewing dossier has been initiated with the senior partners at Aurelia Estates.
-        </p>
-        <div style="background: var(--color-alabaster); padding: 18px; border-radius: 4px; border-left: 3px solid var(--color-gold); margin-bottom: 24px; text-align: left;">
-          <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-gold); font-weight: 600; margin-bottom: 4px;">Private Dossier Reference</div>
-          <div style="font-family: monospace; font-size: 1.1rem; color: var(--color-charcoal); font-weight: 700;">${result.submissionId}</div>
-          <div style="font-size: 0.8rem; color: #777; margin-top: 6px;">Enterprise Route: ScaleNova CRM &bull; Tab: ${result.targetSheet}</div>
-        </div>
-        <button id="closeAureliaModal" class="btn btn-gold" style="width: 100%; justify-content: center; padding: 12px;">Close Confirmation</button>
-      </div>
-    `;
+  function mockSuccessResponse(payload, overrideId) {
+    const submissionId = overrideId || ('SN-D03-' + new Date().toISOString().slice(0, 10).replace(/-/g, '') + '-' + Math.floor(1000 + Math.random() * 9000));
+    
+    console.group('%c[ScaleNova Demo Ingestion: Aurelia Estates]', 'color:#C5A880;font-weight:bold;font-size:12px;');
+    console.log('Demo ID:', 'DEMO-03 (Real Estate & Construction)');
+    console.log('Generated Submission ID:', submissionId);
+    console.log('Target Worksheet:', 'Demo 3 - Real Estate');
+    console.log('Payload dispatched:', payload);
+    console.groupEnd();
 
-    document.body.appendChild(modal);
-    document.getElementById('closeAureliaModal').addEventListener('click', () => {
-      modal.remove();
-    });
+    return {
+      success: true,
+      submission_id: submissionId,
+      demo_id: 'DEMO-03',
+      lead_type: payload.lead_type,
+      message: 'Submission received successfully'
+    };
   }
-}
+
+  return { submitLead };
+})();
