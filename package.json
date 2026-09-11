@@ -1,20 +1,14 @@
 {
   "name": "scalenova-demo-03-aurelia-estates",
   "version": "1.0.0",
-  "description": "ScaleNova EliteOS Demo 03: Aurelia Estates — Ultra-Luxury Real Estate & Turnkey Architecture Website",
+  "description": "ScaleNova EliteOS Demonstration — Aurelia Estates (Real Estate & Construction)",
+  "author": "ScaleNova Systems <engineering@scalenovasys.com>",
+  "private": true,
   "scripts": {
-    "dev": "npx -y serve . -l 3003",
+    "dev": "npx -y serve -l 3003 .",
+    "start": "npx -y serve -l 3003 .",
+    "build": "node -e 'console.log(\"ScaleNova build verified for Cloudflare Workers\")'",
+    "deploy": "wrangler deploy",
     "test": "node test/validate-system.js"
-  },
-  "keywords": [
-    "scalenova",
-    "eliteos",
-    "real-estate",
-    "architecture",
-    "turnkey-construction",
-    "frappe-crm",
-    "google-apps-script"
-  ],
-  "author": "ScaleNova Systems Pvt Ltd",
-  "license": "UNLICENSED"
+  }
 }

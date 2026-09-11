@@ -1,0 +1,14 @@
+name = "scalenova-demo-03-aurelia-estates"
+main = "src/worker.js"
+compatibility_date = "2026-09-01"
+
+[assets]
+directory = "./"
+binding = "ASSETS"
+
+[vars]
+ENVIRONMENT = "production"
+DEMO_ID = "DEMO-03"
+CLIENT_NAME = "Aurelia Estates"
+INDUSTRY = "Real Estate & Construction"
+PRIMARY_DOMAIN = "demo3.scalenovasys.com"
