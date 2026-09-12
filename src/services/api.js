@@ -22,24 +22,26 @@ window.ScaleNovaAPI = (function () {
     }
 
     // 2. Validate mandatory fields
-    if (!formData.name || !formData.email) {
+    const clientName = (formData.name || formData.fullName || '').trim();
+    const clientEmail = (formData.email || '').trim();
+    if (!clientName || !clientEmail) {
       throw new Error('Name and email are mandatory fields.');
     }
 
     const payload = {
       demo_id: config.demoId || 'DEMO-03',
       lead_type: (formData.lead_type || formData.leadType || 'LEAD').toUpperCase(),
-      name: formData.name.trim(),
-      email: formData.email.trim(),
+      name: clientName,
+      email: clientEmail,
       phone: (formData.phone || '').trim(),
-      company: (formData.company || '').trim() || 'Direct Client',
-      service: formData.service || formData.department || formData.course || formData.product || 'General Inquiry',
-      requirement: formData.requirement || formData.scope || formData.symptoms || formData.quantity || 'Standard Scope',
-      project_type: formData.project_type || formData.projectType || 'Commercial',
-      budget: formData.budget || 'Confidential',
+      company: (formData.company || formData.companyName || '').trim() || 'Private Patron',
+      service: formData.service || formData.serviceInterest || 'Bespoke Architectural Residence',
+      requirement: formData.requirement || formData.projectDescription || formData.city || 'Private Portfolio Inquiry',
+      project_type: formData.project_type || formData.projectType || 'Ultra-Luxury Residential',
+      budget: formData.budget || formData.budgetRange || '₹10 Cr - ₹25 Cr',
       preferred_date: formData.preferred_date || formData.preferredDate || formData.date || '',
       preferred_time: formData.preferred_time || formData.preferredTime || formData.time || '',
-      message: (formData.message || formData.notes || '').trim(),
+      message: (formData.message || formData.projectDescription || '').trim(),
       source: 'Aurelia Estates Website',
       source_page: formData.source_page || formData.page || window.location.pathname || 'Home'
     };
