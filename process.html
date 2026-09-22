@@ -60,20 +60,53 @@
       <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="properties.html" class="nav-link">Portfolio</a></li>
-          <li><a href="featured-property.html" class="nav-link">The Sanctuary</a></li>
-          <li><a href="residential.html" class="nav-link">Residential</a></li>
-          <li><a href="commercial.html" class="nav-link">Penthouses</a></li>
-          <li><a href="construction.html" class="nav-link">Engineering</a></li>
-          <li><a href="process.html" class="nav-link active">Process</a></li>
-          <li><a href="insights.html" class="nav-link">Journal</a></li>
-          <li><a href="contact.html" class="nav-link">Ateliers</a></li>
+          <li><a href="properties.html" class="nav-link">Residences</a></li>
+          <li><a href="about.html" class="nav-link">Atelier</a></li>
+          <li><a href="process.html" class="nav-link active">Craft</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
-      <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 22px; font-size: 0.8rem;">Private Viewing</a>
+
+      <div style="display: flex; align-items: center; gap: 14px;">
+        <a href="schedule-visit.html" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.8rem; white-space: nowrap;">Private Viewing</a>
+        <button type="button" class="mobile-nav-toggle" aria-label="Toggle navigation" onclick="toggleAureliaSidePanel()">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
   </header>
+
+  <!-- Slide-Out Mobile App-Like Drawer -->
+  <div class="side-panel-overlay" id="aureliaSideOverlay" onclick="toggleAureliaSidePanel()"></div>
+  <aside class="side-panel-drawer" id="aureliaSideDrawer" aria-label="Mobile Navigation">
+    <div class="side-panel-header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="brand-mark" style="width: 32px; height: 32px; font-size: 1rem; color: var(--color-champagne);">A</div>
+        <span class="brand-name" style="font-size: 1.15rem; color: #FAFAF9;">AURELIA</span>
+      </div>
+      <button class="side-panel-close" aria-label="Close menu" onclick="toggleAureliaSidePanel()">&times;</button>
+    </div>
+    <ul class="side-panel-nav">
+      <li><a href="index.html">Home <span>&rarr;</span></a></li>
+      <li><a href="properties.html">The Sanctuary (Portfolio) <span>&rarr;</span></a></li>
+      <li><a href="residential.html">Private Residences <span>&rarr;</span></a></li>
+      <li><a href="commercial.html">Commercial & Diplomatic Suites <span>&rarr;</span></a></li>
+      <li><a href="featured-property.html">Signature Villa Showcase <span>&rarr;</span></a></li>
+      <li><a href="process.html">Architectural Journey <span>&rarr;</span></a></li>
+      <li><a href="construction.html">Engineering Milestones <span>&rarr;</span></a></li>
+      <li><a href="private-office.html">Family Office Tiers <span>&rarr;</span></a></li>
+      <li><a href="insights.html">Private Journal <span>&rarr;</span></a></li>
+      <li><a href="about.html">Ateliers & Partners <span>&rarr;</span></a></li>
+      <li><a href="contact.html">Concierge & Desks <span>&rarr;</span></a></li>
+      <li><a href="schedule-visit.html">Private Viewing <span>&rarr;</span></a></li>
+      <li><a href="request-brochure.html">Request Monograph <span>&rarr;</span></a></li>
+      <li><a href="sitemap.xml">XML Index <span>&rarr;</span></a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.8rem; color: var(--color-stone);">
+      <div>CONCIERGE: +91 22 6912 3000</div>
+      <div style="margin-top: 4px;">WORLI SEA FACE &bull; MUMBAI</div>
+    </div>
+  </aside>
 
   <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px; position: relative; z-index: 1;">
     <div class="container">
@@ -263,5 +296,24 @@
   <script src="src/components/floorplan-depth.js"></script>
   <script src="src/components/modal-controller.js"></script>
   <script src="src/components/visual-infographics.js"></script>
+
+  <script>
+    function toggleAureliaSidePanel() {
+      const drawer = document.getElementById("aureliaSideDrawer");
+      const overlay = document.getElementById("aureliaSideOverlay");
+      if (drawer && overlay) {
+        const isOpen = drawer.classList.contains("active");
+        if (isOpen) {
+          drawer.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.classList.remove("side-panel-open");
+        } else {
+          drawer.classList.add("active");
+          overlay.classList.add("active");
+          document.body.classList.add("side-panel-open");
+        }
+      }
+    }
+  </script>
 </body>
 </html>
