@@ -1,88 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aurelia-estates.scalenova.com/</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://aurelia-estates.scalenova.com/featured-property.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/about</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/properties.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/commercial</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/residential.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/construction</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/commercial.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/contact</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/construction.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/featured-property</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/process.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/private-office.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/insights</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/schedule-visit.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://aurelia-estates.scalenova.com/request-brochure.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://aurelia-estates.scalenova.com/insights.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/privacy</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/about.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/private-office</loc>
     <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/contact.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/process</loc>
     <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://aurelia-estates.scalenova.com/privacy.html</loc>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/properties</loc>
     <lastmod>2026-09-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.30</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/request-brochure</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/residential</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/schedule-visit</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-demo-03-aurelia-estates.ranam.workers.dev/terms</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
