@@ -3,84 +3,298 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Alabaster Villa — Signature Estate Dossier — Aurelia Estates</title>
-  <meta name="description" content="Technical and architectural monograph of The Alabaster Villa at Whitefield, Bengaluru.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FBFBF9'/><circle cx='16' cy='16' r='12' stroke='%23C5A059' stroke-width='2' fill='none'/><text x='16' y='21' font-family='serif' font-size='14' text-anchor='middle' fill='%23C5A059'>A</text></svg>">
+  <title>The Alabaster Villa — Signature Architectural Monograph — Aurelia Estates</title>
+  <meta name="description" content="Technical and architectural monograph of The Alabaster Villa at Whitefield, Bengaluru: 14,500 sq ft private estate organized around a central Roman Travertine cloister.">
+  <meta name="keywords" content="The Alabaster Villa, luxury villa Bangalore, private estate Whitefield, Tivoli travertine architecture, bespoke residence India">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Alabaster Villa — Signature Monograph — Aurelia Estates">
+  <meta property="og:description" content="An introspective 14,500 sq ft private estate organized around an open-air central cloister.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SingleFamilyResidence",
+    "name": "The Alabaster Villa",
+    "description": "Bespoke 14,500 sq ft private residence crafted from Tivoli Roman Travertine in Whitefield, Bengaluru.",
+    "floorSize": {
+      "@type": "QuantitativeValue",
+      "value": 14500,
+      "unitCode": "FTK"
+    },
+    "numberOfRooms": 6,
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FAF8F5'/><circle cx='16' cy='16' r='12' stroke='%23C5A880' stroke-width='2' fill='none'/><text x='16' y='21' font-family='serif' font-size='14' text-anchor='middle' fill='%23C5A880'>A</text></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Axonometric Canvas -->
+  <canvas id="architectural-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div style="background: var(--color-charcoal); color: var(--color-ivory); padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid var(--color-border-gold);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 7px; height: 7px; background: var(--color-champagne); border-radius: 50%;"></span>
+        <span style="font-family: var(--font-sans); letter-spacing: 0.04em;">SIGNATURE MONOGRAPH</span> &bull; Whitefield Private Reserve &bull; Completed 2026
+      </div>
+      <div>
+        <a href="properties.html" style="color: var(--color-champagne); text-decoration: none; margin-right: 16px; font-weight: 500;">&larr; Return to Portfolio</a>
+        Concierge: <a href="tel:+918069804400" style="color: #FFF; text-decoration: none; font-weight: 500;">+91 80 6980 4400</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo">
+      <a href="index.html" class="brand-logo" aria-label="Aurelia Estates Home">
         <div class="brand-symbol">A</div>
-        <div class="brand-title">Aurelia Estates</div>
+        <div>
+          <div class="brand-title">Aurelia Estates</div>
+          <div style="font-size: 0.68rem; color: var(--color-stone); letter-spacing: 0.12em; text-transform: uppercase;">Private Residences &bull; Ateliers</div>
+        </div>
       </a>
-      <nav>
+      <nav aria-label="Main Navigation">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="properties.html" class="nav-link active">Portfolio</a></li>
+          <li><a href="properties.html" class="nav-link">Portfolio</a></li>
+          <li><a href="featured-property.html" class="nav-link active">The Sanctuary</a></li>
           <li><a href="residential.html" class="nav-link">Residential</a></li>
-          <li><a href="commercial.html" class="nav-link">Commercial</a></li>
+          <li><a href="commercial.html" class="nav-link">Penthouses</a></li>
           <li><a href="construction.html" class="nav-link">Engineering</a></li>
           <li><a href="process.html" class="nav-link">Process</a></li>
           <li><a href="insights.html" class="nav-link">Journal</a></li>
           <li><a href="contact.html" class="nav-link">Ateliers</a></li>
         </ul>
       </nav>
-      <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 20px;">Private Viewing</a>
+      <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 22px; font-size: 0.8rem;">Private Viewing</a>
     </div>
   </header>
 
-  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px;">
+  <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px; position: relative; z-index: 1;">
     <div class="container">
-      <div style="max-width: 860px; margin-bottom: 56px;">
-        <span class="eyebrow">Signature Monograph &bull; Whitefield, Bengaluru</span>
-        <h1>The Alabaster Villa</h1>
-        <p style="font-size: 1.25rem; color: var(--color-muted); line-height: 1.7; margin-top: 16px;">
-          An introspective 14,500 sq ft private estate organized around an open-air central cloister paved with cross-cut Navona Travertine.
+      
+      <!-- Hero Headline with Badge -->
+      <div style="max-width: 860px; margin-bottom: 48px;">
+        <span class="badge-luxe" style="margin-bottom: 12px;">ARCHITECTURAL MONOGRAPH 01</span>
+        <h1 style="font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.4rem); line-height: 1.15; margin-bottom: 16px; color: var(--color-charcoal);">
+          The Alabaster Villa, Whitefield.
+        </h1>
+        <p style="font-size: 1.25rem; color: var(--color-stone); line-height: 1.8; max-width: 760px; font-family: var(--font-serif);">
+          An introspective 14,500 sq ft private estate organized around an open-air central cloister paved with cross-cut Navona Travertine and framed by century-old protected eucalyptus groves.
         </p>
       </div>
 
-      <div class="grid-3" style="margin-bottom: 56px;">
-        <div class="estate-card">
-          <span class="property-badge">SPATIAL METRICS</span>
-          <h3>14,500 SQ FT</h3>
-          <p style="font-size: 0.85rem; color: var(--color-muted); margin-top: 8px;">
-            5 En-Suite Master Suites &bull; 6 Car Underground Gallery &bull; Subterranean Spa &bull; Private Tasting Room
-          </p>
+      <!-- Live Spatial KPI Ribbon -->
+      <div class="kpi-ribbon-container" style="margin-bottom: 64px;">
+        <div class="kpi-ribbon-item">
+          <div class="kpi-ribbon-value" data-kpi-target="14500" data-kpi-suffix=" SQ FT">0 SQ FT</div>
+          <div class="kpi-ribbon-label">Climate-Conditioned Interior</div>
         </div>
-        <div class="estate-card">
-          <span class="property-badge">MATERIAL PALETTE</span>
-          <h3>Quarry Origin</h3>
-          <p style="font-size: 0.85rem; color: var(--color-muted); margin-top: 8px;">
-            Tivoli Roman Travertine &bull; Solid French Oak Plank Flooring &bull; Fluted Basalt Water Walls &bull; Hand-Burnished Bronze
-          </p>
+        <div class="kpi-ribbon-item">
+          <div class="kpi-ribbon-value" data-kpi-target="0.75" data-kpi-suffix=" Acre">0.00 Acre</div>
+          <div class="kpi-ribbon-label">Freehold Private Parcel</div>
         </div>
-        <div class="estate-card">
-          <span class="property-badge">ACQUISITION STATUS</span>
-          <h3>Turnkey Completion</h3>
-          <p style="font-size: 0.85rem; color: var(--color-muted); margin-top: 8px;">
-            Fully Commissioned with B&O Acoustic Architecture &bull; Ready for Patrons &bull; Valuation: ₹28.5 Cr
-          </p>
+        <div class="kpi-ribbon-item">
+          <div class="kpi-ribbon-value" data-kpi-target="20" data-kpi-suffix=" Meters">0 Meters</div>
+          <div class="kpi-ribbon-label">Heated Glass-Bottom Pool</div>
+        </div>
+        <div class="kpi-ribbon-item">
+          <div class="kpi-ribbon-value" data-kpi-target="100" data-kpi-suffix="%">0%</div>
+          <div class="kpi-ribbon-label">Roman Travertine Cladded</div>
         </div>
       </div>
 
-      <div class="estate-card" style="padding: 48px; border-left: 3px solid var(--color-gold); margin-bottom: 64px;">
-        <h3 style="margin-bottom: 16px;">Arrange a Confidential Walkthrough</h3>
-        <p style="color: var(--color-muted); margin-bottom: 24px; max-width: 680px;">
-          Direct appointments with principal architects Julian Varma and Sunita Rao are arranged with 48 hours notice. Complete architectural drawings and structural schematics will be presented during your visit.
-        </p>
-        <a href="schedule-visit.html" class="btn btn-gold">Book Private Viewing at The Alabaster Villa &rarr;</a>
+      <!-- Architectural Hero Imagery Display -->
+      <div style="border-radius: 4px; overflow: hidden; margin-bottom: 72px; box-shadow: var(--shadow-luxe); position: relative; height: 500px;">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=85" alt="The Alabaster Villa Exterior Architecture" style="width: 100%; height: 100%; object-fit: cover;">
+        <div style="position: absolute; bottom: 24px; left: 24px; background: rgba(25, 22, 20, 0.85); backdrop-filter: blur(12px); padding: 12px 20px; border-radius: 4px; border: 1px solid var(--color-border-gold); color: #FFF;">
+          <div style="font-family: var(--font-display); font-size: 1.1rem; color: var(--color-champagne);">Atelier View: The Central Travertine Cloister</div>
+          <div style="font-size: 0.75rem; color: var(--color-stone-light);">Natural Light Orientation: 180° Southern Exposure &bull; Natural Cooling Airflow</div>
+        </div>
       </div>
+
+      <!-- Interactive 3-Level Penthouse Wing Switcher -->
+      <section style="margin-bottom: 80px;">
+        <div style="text-align: center; max-width: 760px; margin: 0 auto 36px;">
+          <span class="badge-luxe" style="margin-bottom: 10px;">SPATIAL PROGRAMMING</span>
+          <h2 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 10px; color: var(--color-charcoal);">Three Levels of Introspective Living</h2>
+          <p style="color: var(--color-stone); font-size: 0.95rem; font-family: var(--font-serif);">Select a level below to inspect room configurations, ceiling heights, and private outdoor courtyards.</p>
+        </div>
+
+        <div class="penthouse-spec-wrapper">
+          <div class="spec-nav-pills">
+            <button class="spec-tab-btn active" data-spec-target="level-ground">
+              <span class="spec-tag">Level 01</span>
+              <span>Grand Reception Cloister</span>
+            </button>
+            <button class="spec-tab-btn" data-spec-target="level-upper">
+              <span class="spec-tag">Level 02</span>
+              <span>Master Sanctuary Suites</span>
+            </button>
+            <button class="spec-tab-btn" data-spec-target="level-sub">
+              <span class="spec-tag">Level 00</span>
+              <span>Spa, Cellar & Car Gallery</span>
+            </button>
+          </div>
+
+          <div class="spec-content-display">
+            <!-- Level 01 -->
+            <div id="level-ground" class="spec-panel active">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--color-charcoal);">Level 01: Grand Cloister & Entertaining Salons</h3>
+                <span class="badge-luxe">CEILING HEIGHT: 4.8 METERS</span>
+              </div>
+              <p style="color: var(--color-stone); font-size: 0.95rem; line-height: 1.8; margin-bottom: 24px; font-family: var(--font-serif);">
+                Featuring motorized Sky-Frame glass sliding panels that dissolve the boundary between the formal dining salon, tea pavilion, and the 20-meter heated reflection pool.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-alabaster); padding: 16px; border-radius: 4px;">
+                  <div style="font-size: 0.72rem; color: var(--color-stone); text-transform: uppercase;">FORMAL SALON</div>
+                  <div style="font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">1,200 Sq. Ft.</div>
+                  <div style="font-size: 0.8rem; color: var(--color-stone); margin-top: 4px;">Double-height fireplace carved from Nero Marquina.</div>
+                </div>
+                <div style="background: var(--color-alabaster); padding: 16px; border-radius: 4px;">
+                  <div style="font-size: 0.72rem; color: var(--color-stone); text-transform: uppercase;">SHOW & CHEF KITCHENS</div>
+                  <div style="font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">Dual Boffi Lines</div>
+                  <div style="font-size: 0.8rem; color: var(--color-stone); margin-top: 4px;">Gaggenau 400 Series appliances throughout.</div>
+                </div>
+                <div style="background: var(--color-alabaster); padding: 16px; border-radius: 4px;">
+                  <div style="font-size: 0.72rem; color: var(--color-stone); text-transform: uppercase;">CENTRAL WATER CLOISTER</div>
+                  <div style="font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">Open-Air Travertine</div>
+                  <div style="font-size: 0.8rem; color: var(--color-stone); margin-top: 4px;">Microclimate temperature regulated by falling water walls.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Level 02 -->
+            <div id="level-upper" class="spec-panel">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--color-charcoal);">Level 02: Master Sanctuary Suites</h3>
+                <span class="badge-luxe">5 EN-SUITE SUITES</span>
+              </div>
+              <p style="color: var(--color-stone); font-size: 0.95rem; line-height: 1.8; margin-bottom: 24px; font-family: var(--font-serif);">
+                The primary master wing commands a private 800 sq ft sunrise terrace, dual Poliform walk-in dressing galleries, and a freestanding monolithic stone soaking tub carved from Calacatta Oro.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-alabaster); padding: 16px; border-radius: 4px;">
+                  <div style="font-size: 0.72rem; color: var(--color-stone); text-transform: uppercase;">PRIMARY SUITE</div>
+                  <div style="font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">2,400 Sq. Ft.</div>
+                  <div style="font-size: 0.8rem; color: var(--color-stone); margin-top: 4px;">Private sunrise meditation deck with outdoor shower.</div>
+                </div>
+                <div style="background: var(--color-alabaster); padding: 16px; border-radius: 4px;">
+                  <div style="font-size: 0.72rem; color: var(--color-stone); text-transform: uppercase;">ACOUSTIC SHIELDING</div>
+                  <div style="font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">STC 54 Acoustic Glass</div>
+                  <div style="font-size: 0.8rem; color: var(--color-stone); margin-top: 4px;">Complete sound isolation from external surroundings.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Level 00 -->
+            <div id="level-sub" class="spec-panel">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: var(--color-charcoal);">Level 00: Subterranean Wellness Spa & Car Gallery</h3>
+                <span class="badge-luxe">BIOMETRIC AIRLOCK</span>
+              </div>
+              <p style="color: var(--color-stone); font-size: 0.95rem; line-height: 1.8; margin-bottom: 24px; font-family: var(--font-serif);">
+                Organized with an authentic Finnish sauna, hammam steam room, dedicated Pilates studio, 1,500-bottle wine tasting salon, and a dehumidified 6-car gallery with EV fast chargers.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-alabaster); padding: 16px; border-radius: 4px;">
+                  <div style="font-size: 0.72rem; color: var(--color-stone); text-transform: uppercase;">SPA & HAMMAM</div>
+                  <div style="font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">Natural Stone Finish</div>
+                  <div style="font-size: 0.8rem; color: var(--color-stone); margin-top: 4px;">Aromatherapy infusion & cold plunge bath.</div>
+                </div>
+                <div style="background: var(--color-alabaster); padding: 16px; border-radius: 4px;">
+                  <div style="font-size: 0.72rem; color: var(--color-stone); text-transform: uppercase;">PRIVATE WINE CELLAR</div>
+                  <div style="font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">1,500 Bottles</div>
+                  <div style="font-size: 0.8rem; color: var(--color-stone); margin-top: 4px;">Constant 14 °C and 70% relative humidity.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Private Viewing CTA -->
+      <div class="card" style="text-align: center; padding: 56px 40px; background: var(--color-charcoal); color: var(--color-ivory); border-radius: 4px;">
+        <span class="badge-luxe" style="margin-bottom: 16px; background: rgba(197, 168, 128, 0.2); border-color: var(--color-champagne);">ATELIER CONFIDENTIALITY</span>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; margin: 12px 0 16px; color: var(--color-ivory);">Experience The Alabaster Villa in Person</h2>
+        <p style="color: var(--color-stone-light); max-width: 620px; margin: 0 auto 32px; font-size: 1rem; line-height: 1.8; font-family: var(--font-serif);">
+          Private tours include access to the architectural model room, stone origin library, and complete structural engineering blueprints.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="schedule-visit.html" class="btn btn-gold" style="padding: 14px 32px;">Schedule Private Appointment &rarr;</a>
+          <a href="properties.html" class="btn btn-secondary" style="padding: 14px 32px; border-color: var(--color-champagne); color: #FFF;">Explore Full Portfolio</a>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-bottom">
-      <div>&copy; 2026 Aurelia Estates & Architecture Ltd. Discretion Guaranteed.</div>
-      <div style="color: var(--color-gold);">ScaleNova EliteOS Demo Platform</div>
+  <!-- Site Footer with Full Sitemap Links -->
+  <footer class="site-footer" style="background: var(--color-alabaster); border-top: 1px solid var(--color-border); padding: 64px 0 32px; position: relative; z-index: 1;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 48px;">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-symbol">A</div>
+            <div class="brand-title">Aurelia Estates</div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--color-stone); line-height: 1.7; font-family: var(--font-serif);">
+            Bespoke architecture, private residences, and landmark sky villas for distinguished families across India and the GCC.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: var(--color-charcoal); font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-display);">Portfolio</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-stone);">
+            <li><a href="properties.html" style="color: inherit; text-decoration: none;">Curated Estates</a></li>
+            <li><a href="featured-property.html" style="color: inherit; text-decoration: none;">The Sky Sanctuary</a></li>
+            <li><a href="residential.html" style="color: inherit; text-decoration: none;">Residential Villas</a></li>
+            <li><a href="commercial.html" style="color: inherit; text-decoration: none;">Corporate Penthouses</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--color-charcoal); font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-display);">Monograph</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-stone);">
+            <li><a href="about.html" style="color: inherit; text-decoration: none;">About the Atelier</a></li>
+            <li><a href="construction.html" style="color: inherit; text-decoration: none;">Engineering Rigor</a></li>
+            <li><a href="process.html" style="color: inherit; text-decoration: none;">Acquisition Process</a></li>
+            <li><a href="insights.html" style="color: inherit; text-decoration: none;">Architectural Journal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--color-charcoal); font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-display);">Concierge</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-stone);">
+            <li><a href="schedule-visit.html" style="color: inherit; text-decoration: none;">Private Viewing</a></li>
+            <li><a href="private-office.html" style="color: inherit; text-decoration: none;">Private Family Office</a></li>
+            <li><a href="request-brochure.html" style="color: inherit; text-decoration: none;">Request Monograph</a></li>
+            <li><a href="sitemap.xml" style="color: inherit; text-decoration: none;">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--color-border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-stone-light); flex-wrap: wrap; gap: 12px;">
+        <div>&copy; 2026 Aurelia Estates. ScaleNova Systems EliteOS Client Platform.</div>
+        <div>Ateliers: Mumbai &bull; Bangalore &bull; Hyderabad &bull; Goa &bull; Dubai</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="src/components/floorplan-depth.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>

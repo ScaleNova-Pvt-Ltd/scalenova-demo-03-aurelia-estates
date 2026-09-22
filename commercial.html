@@ -3,64 +3,386 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Commercial Architecture & Ateliers — Aurelia Estates</title>
-  <meta name="description" content="Turnkey corporate headquarters, boutique investment ateliers, and luxury flagships.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FBFBF9'/><circle cx='16' cy='16' r='12' stroke='%23C5A059' stroke-width='2' fill='none'/><text x='16' y='21' font-family='serif' font-size='14' text-anchor='middle' fill='%23C5A059'>A</text></svg>">
+  <title>Corporate Ateliers & Family Office Sanctums — Aurelia Estates</title>
+  <meta name="description" content="Turnkey single-family office headquarters, sovereign wealth ateliers, and luxury flagships designed for supreme prestige and discretion.">
+  <meta name="keywords" content="family office architecture, luxury corporate atelier, private equity sanctum, bespoke office design India">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Corporate Ateliers & Family Office Sanctums — Aurelia Estates">
+  <meta property="og:description" content="Sanctuaries of institutional gravitas, SCIF acoustic security, and timeless architectural dignity.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Aurelia Estates Commercial Architecture",
+    "description": "Bespoke corporate ateliers and sovereign family office sanctums.",
+    "areaServed": "India, UAE, Singapore"
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FAF8F5'/><circle cx='16' cy='16' r='12' stroke='%23C5A880' stroke-width='2' fill='none'/><text x='16' y='21' font-family='serif' font-size='14' text-anchor='middle' fill='%23C5A880'>A</text></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Axonometric Canvas -->
+  <canvas id="architectural-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div style="background: var(--color-charcoal); color: var(--color-ivory); padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid var(--color-border-gold);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 7px; height: 7px; background: var(--color-champagne); border-radius: 50%;"></span>
+        <span style="font-family: var(--font-sans); letter-spacing: 0.04em;">ENTERPRISE SANCTUMS</span> &bull; SCIF Certified Isolation &bull; Biometric Access
+      </div>
+      <div>
+        <a href="properties.html" style="color: var(--color-champagne); text-decoration: none; margin-right: 16px; font-weight: 500;">View Portfolio &rarr;</a>
+        Concierge: <a href="tel:+918069804400" style="color: #FFF; text-decoration: none; font-weight: 500;">+91 80 6980 4400</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-symbol">A</div><div class="brand-title">Aurelia Estates</div></a>
-      <nav><ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="properties.html" class="nav-link">Portfolio</a></li>
-        <li><a href="residential.html" class="nav-link">Residential</a></li>
-        <li><a href="commercial.html" class="nav-link active">Commercial</a></li>
-        <li><a href="construction.html" class="nav-link">Engineering</a></li>
-        <li><a href="process.html" class="nav-link">Process</a></li>
-        <li><a href="insights.html" class="nav-link">Journal</a></li>
-        <li><a href="contact.html" class="nav-link">Ateliers</a></li>
-      </ul></nav>
-      <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 20px;">Private Viewing</a>
+      <a href="index.html" class="brand-logo" aria-label="Aurelia Estates Home">
+        <div class="brand-symbol">A</div>
+        <div>
+          <div class="brand-title">Aurelia Estates</div>
+          <div style="font-size: 0.68rem; color: var(--color-stone); letter-spacing: 0.12em; text-transform: uppercase;">Private Residences &bull; Ateliers</div>
+        </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="properties.html" class="nav-link">Portfolio</a></li>
+          <li><a href="featured-property.html" class="nav-link">The Sanctuary</a></li>
+          <li><a href="residential.html" class="nav-link">Residential</a></li>
+          <li><a href="commercial.html" class="nav-link active">Penthouses</a></li>
+          <li><a href="construction.html" class="nav-link">Engineering</a></li>
+          <li><a href="process.html" class="nav-link">Process</a></li>
+          <li><a href="insights.html" class="nav-link">Journal</a></li>
+          <li><a href="contact.html" class="nav-link">Ateliers</a></li>
+        </ul>
+      </nav>
+      <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 22px; font-size: 0.8rem;">Private Viewing</a>
     </div>
   </header>
 
   <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px;">
     <div class="container">
-      <div style="max-width: 820px; margin-bottom: 64px;">
-        <span class="eyebrow">Enterprise Sanctums</span>
-        <h1>Bespoke Corporate Ateliers</h1>
-        <p style="font-size: 1.15rem; color: var(--color-muted); line-height: 1.7;">
-          Workplaces that reinforce prestige, discretion, and institutional gravitas for private equity funds, family offices, and tech enterprises.
+      <!-- Breadcrumb & Header -->
+      <div style="max-width: 880px; margin-bottom: 48px;">
+        <span class="eyebrow" style="color: var(--color-bronze); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">ENTERPRISE ARCHITECTURE & WORKPLACE DIGNITY</span>
+        <h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--color-charcoal); line-height: 1.15; margin: 12px 0 20px;">
+          Bespoke Corporate Ateliers & Sanctums
+        </h1>
+        <p style="font-size: 1.15rem; color: var(--color-stone); line-height: 1.8; max-width: 760px;">
+          Workplaces that project institutional permanence, absolute acoustic privacy, and unassailable prestige for multi-billion family offices, private equity boards, and sovereign flagships.
         </p>
       </div>
 
-      <div class="grid-2">
-        <div class="estate-card">
-          <span class="property-badge">FINANCIAL ATELIERS</span>
-          <h3>Family Office & Fund Headquarters</h3>
-          <p style="color: var(--color-muted); line-height: 1.8;">
-            Acoustically isolated boardrooms, biometric private client suites, vault infrastructure, and curated art gallery lounges.
-          </p>
+      <!-- KPI Ribbon -->
+      <div class="kpi-ribbon" style="margin-bottom: 64px;">
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="14" data-suffix=" Ateliers">14 Ateliers</div>
+          <div class="kpi-label">Institutional Headquarters Delivered</div>
         </div>
-        <div class="estate-card">
-          <span class="property-badge">RETAIL SANCTUARIES</span>
-          <h3>Luxury Flagship Pavilions</h3>
-          <p style="color: var(--color-muted); line-height: 1.8;">
-            Monolithic stone facades, custom brass framing, concealed lighting arrays, and curated customer journey zones for fine jewelry and couture houses.
-          </p>
+        <div class="kpi-card">
+          <div class="kpi-value" data-prefix="SCIF " data-suffix=" Grade">SCIF Grade</div>
+          <div class="kpi-label">RF & Acoustic Eavesdrop Shielding</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="0" data-suffix="% Leak">0.00% Leak</div>
+          <div class="kpi-label">Speech Privacy Integrity (ASTM E1130)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="45" data-suffix="ms">45ms</div>
+          <div class="kpi-label">Biometric Airlock Response Time</div>
+        </div>
+      </div>
+
+      <!-- Interactive Commercial Archetype Switcher -->
+      <section style="margin-bottom: 80px;">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: var(--color-bronze); font-weight: 600; text-transform: uppercase;">WORKPLACE SANCTUMS</span>
+          <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--color-charcoal); margin-top: 8px;">
+            The Anatomy of Sovereign Discretion
+          </h2>
+          <p style="color: var(--color-stone); font-size: 0.95rem;">Explore specialized architectural layouts designed for high-value asset management.</p>
+        </div>
+
+        <div class="tech-switcher">
+          <div class="switcher-nav">
+            <button class="switcher-btn active" data-target="com-familyoffice">01 Single Family Office Atelier</button>
+            <button class="switcher-btn" data-target="com-hedgefund">02 Quantitative Trading Pavilion</button>
+            <button class="switcher-btn" data-target="com-flagship">03 Luxury Couture Flagship</button>
+          </div>
+
+          <div class="switcher-content">
+            <!-- Typology 1 -->
+            <div class="switcher-panel active" id="com-familyoffice">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: gap;">
+                <div>
+                  <span style="background: rgba(197, 168, 128, 0.15); color: var(--color-bronze); padding: 4px 10px; font-size: 0.75rem; border-radius: 4px; font-weight: 600;">DYNASTIC CORE</span>
+                  <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin-top: 8px;">Single Family Office Headquarters</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-scif" style="padding: 8px 16px; font-size: 0.8rem;">View SCIF Security Specs &rarr;</button>
+              </div>
+              <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 24px;">
+                Designed for patriarchs, trustees, and investment committees requiring an environment akin to a five-star private club. Features include a dedicated client dining salon, climate-controlled art storage vault, and biometric boardrooms.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Acoustic Rating</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">STC 60 Boardroom Walls</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">RF Eavesdrop Shielding</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">-90 dB Faraday Attenuation</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Private Core</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">Principal Private Study & Spa</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Typology 2 -->
+            <div class="switcher-panel" id="com-hedgefund">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: gap;">
+                <div>
+                  <span style="background: rgba(197, 168, 128, 0.15); color: var(--color-bronze); padding: 4px 10px; font-size: 0.75rem; border-radius: 4px; font-weight: 600;">FINANCIAL INTELLECT</span>
+                  <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin-top: 8px;">Quantitative Trading & Strategy Floor</h3>
+                </div>
+                <a href="contact.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.8rem;">Commission Commercial Floor &rarr;</a>
+              </div>
+              <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 24px;">
+                Combining raw computational power with serene Japanese zen aesthetics. High-density underfloor cooling channels, triple-redundant dark fiber entry points, and circadian biodynamic LED lighting preserve cognitive alertness during market surges.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Power Resilience</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">N+2 UPS & Diesel Generators</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Cooling Redundancy</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">Precision In-Row CRAC 24/7</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Circadian Lighting</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">DALI Spectral Modulation</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Typology 3 -->
+            <div class="switcher-panel" id="com-flagship">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: gap;">
+                <div>
+                  <span style="background: rgba(197, 168, 128, 0.15); color: var(--color-bronze); padding: 4px 10px; font-size: 0.75rem; border-radius: 4px; font-weight: 600;">LUXURY RETAIL</span>
+                  <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin-top: 8px;">Haute Horlogerie & Couture Pavilion</h3>
+                </div>
+                <a href="schedule-visit.html" class="btn btn-gold" style="padding: 8px 16px; font-size: 0.8rem;">Request Flagship Portfolio &rarr;</a>
+              </div>
+              <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 24px;">
+                Sculptural stone facades with double-height bronze fenestrations that capture street prominence while insulating high-net-worth clients into an intimate, museum-quality salon of velvet, French oak, and concealed display vitrines.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Facade Geometry</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">9.2m Carved Basalt Archway</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">VIP Salon Suites</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">3 Biometric Private Salons</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Security Glazing</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">BR4 Ballistic Certification</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 Commercial Ateliers Grid (3D Tilt Cards) -->
+      <section style="margin-bottom: 80px;">
+        <div style="margin-bottom: 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: var(--color-bronze); font-weight: 600; text-transform: uppercase;">COMPLETED ATELIERS</span>
+          <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--color-charcoal); margin-top: 8px;">
+            Institutional Landmarks of Distinction
+          </h2>
+        </div>
+
+        <div class="grid-2">
+          <!-- Card 1 -->
+          <div class="estate-card tilt-card" data-modal="modal-scif">
+            <span class="property-badge">BKC FINANCIAL DISTRICT, MUMBAI</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin: 12px 0 8px;">Sovereign Capital Atelier</h3>
+            <p style="font-size: 0.9rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              A 16,500 sq ft headquarters for an international family office with Faraday cage boardroom, private dining terrace, and vault.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">16,500 Sq Ft</span>
+              <span class="chip">Faraday RF Shielding</span>
+              <span class="chip">Private Helipad Access</span>
+            </div>
+            <a href="javascript:void(0)" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Inspect SCIF Blueprints &rarr;</a>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="estate-card tilt-card">
+            <span class="property-badge">DIFC GATE DISTRICT, DUBAI</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin: 12px 0 8px;">DIFC Private Sanctum</h3>
+            <p style="font-size: 0.9rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              A 12,000 sq ft dual-level executive office featuring dry-stacked Jordanian limestone, desert courtyard views, and curated modern art gallery.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">12,000 Sq Ft</span>
+              <span class="chip">Gate District Location</span>
+              <span class="chip">Private Wine Cellar</span>
+            </div>
+            <a href="schedule-visit.html" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Request Private Monograph &rarr;</a>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="estate-card tilt-card">
+            <span class="property-badge">INDIRANAGAR, BANGALORE</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin: 12px 0 8px;">Founder Tech Sanctum</h3>
+            <p style="font-size: 0.9rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              A 22,000 sq ft biophilic campus featuring exposed basalt columns, reflection pools, private amphitheater, and high-speed data enclave.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">22,000 Sq Ft</span>
+              <span class="chip">LEED Platinum</span>
+              <span class="chip">Biophilic Courtyards</span>
+            </div>
+            <a href="schedule-visit.html" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Request Facility Walkthrough &rarr;</a>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="estate-card tilt-card">
+            <span class="property-badge">COLABA HERITAGE MILE, MUMBAI</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin: 12px 0 8px;">Haute Horlogerie Flagship</h3>
+            <p style="font-size: 0.9rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              A 9,500 sq ft boutique flagship blending Victorian stone arches with bronze-framed vitrines and private collector tasting lounges.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">9,500 Sq Ft</span>
+              <span class="chip">Heritage Preservation</span>
+              <span class="chip">Ballistic BR4 Glass</span>
+            </div>
+            <a href="contact.html" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Inquire Commercial Commission &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Commission CTA -->
+      <div style="background: var(--color-charcoal); color: var(--color-ivory); border-radius: 12px; padding: 48px; border: 1px solid var(--color-border-gold); text-align: center; max-width: 860px; margin: 0 auto;">
+        <span style="color: var(--color-champagne); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;">INSTITUTIONAL ENGAGEMENT</span>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; margin: 12px 0 16px; color: #FFF;">
+          Design Your Sovereign Corporate Flagship
+        </h2>
+        <p style="color: var(--color-ivory-dim); max-width: 600px; margin: 0 auto 28px; line-height: 1.7; font-size: 0.95rem;">
+          Consult directly with Aurelia's principal partners under standard non-disclosure terms to assess zoning, acoustic security, and spatial feasibility.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="schedule-visit.html" class="btn btn-gold" style="padding: 12px 28px;">Initiate Partner Briefing</a>
+          <a href="private-office.html" class="btn btn-outline" style="color: var(--color-ivory); border-color: rgba(255,255,255,0.3); padding: 12px 28px;">Explore Private Office Services</a>
         </div>
       </div>
     </div>
   </main>
 
+  <!-- Modal: SCIF Technical Dossier -->
+  <div class="modal-overlay" id="modal-scif" role="dialog" aria-modal="true" aria-labelledby="modal-scif-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: var(--color-bronze); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">TECHNICAL BRIEFING</span>
+          <h3 id="modal-scif-title" style="font-family: var(--font-display); font-size: 1.5rem; color: var(--color-charcoal); margin-top: 4px;">SCIF Acoustic & RF Shielding Specifications</h3>
+        </div>
+        <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 20px;">
+          For multi-family offices managing sensitive M&A and asset governance, Aurelia delivers certified Sensitive Compartmented Information Facility (SCIF) spaces compliant with international intelligence agency acoustics standards.
+        </p>
+        <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="font-weight: 600; color: var(--color-charcoal); margin-bottom: 8px;">Shielding Architecture:</div>
+          <div style="font-size: 0.85rem; color: var(--color-stone); line-height: 1.6;">
+            &bull; <strong>Faraday Cage Mesh:</strong> Dual copper mesh layers attenuating electromagnetic radiation from 10 kHz to 18 GHz (&gt; 90 dB attenuation)<br>
+            &bull; <strong>Acoustic Isolation:</strong> STC 60 perimeter wall assemblies with vibration-decoupled resilient channels<br>
+            &bull; <strong>Duct Sound Traps:</strong> 90-degree baffled attenuator sleeves eliminating voice transmission through ventilation shafts<br>
+            &bull; <strong>Biometric Interlock:</strong> Dual-door vestibule requiring dual-factor biometric authorization to prevent tailgating
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.85rem;">Request Confidential Technical Audit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
   <footer class="site-footer">
-    <div class="container footer-bottom">
-      <div>&copy; 2026 Aurelia Estates & Architecture Ltd. Discretion Guaranteed.</div>
-      <div style="color: var(--color-gold);">ScaleNova EliteOS Demo Platform</div>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-symbol">A</div>
+            <div>
+              <div class="brand-title">Aurelia Estates</div>
+              <div style="font-size: 0.65rem; color: var(--color-stone); letter-spacing: 0.12em; text-transform: uppercase;">Private Residences &bull; Ateliers</div>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--color-stone); line-height: 1.8; max-width: 320px;">
+            Crafting enduring architectural landmarks of quiet dignity, natural stone permanence, and acoustic sanctuary.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: var(--color-charcoal); font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-display);">Portfolio</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-stone);">
+            <li><a href="properties.html" style="color: inherit; text-decoration: none;">All Properties</a></li>
+            <li><a href="featured-property.html" style="color: inherit; text-decoration: none;">The Sanctuary Penthouse</a></li>
+            <li><a href="residential.html" style="color: inherit; text-decoration: none;">Residential Compounds</a></li>
+            <li><a href="commercial.html" style="color: inherit; text-decoration: none;">Corporate Ateliers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--color-charcoal); font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-display);">Craft & Rigor</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-stone);">
+            <li><a href="about.html" style="color: inherit; text-decoration: none;">Architectural Philosophy</a></li>
+            <li><a href="construction.html" style="color: inherit; text-decoration: none;">Engineering Rigor</a></li>
+            <li><a href="process.html" style="color: inherit; text-decoration: none;">Acquisition Process</a></li>
+            <li><a href="insights.html" style="color: inherit; text-decoration: none;">Architectural Journal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--color-charcoal); font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-display);">Concierge</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-stone);">
+            <li><a href="schedule-visit.html" style="color: inherit; text-decoration: none;">Private Viewing</a></li>
+            <li><a href="private-office.html" style="color: inherit; text-decoration: none;">Private Family Office</a></li>
+            <li><a href="request-brochure.html" style="color: inherit; text-decoration: none;">Request Monograph</a></li>
+            <li><a href="sitemap.xml" style="color: inherit; text-decoration: none;">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--border-subtle); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-stone-light); flex-wrap: wrap; gap: 12px;">
+        <div>&copy; 2026 Aurelia Estates. ScaleNova Systems EliteOS Client Platform.</div>
+        <div>Ateliers: Mumbai &bull; Bangalore &bull; Hyderabad &bull; Goa &bull; Dubai</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="src/components/floorplan-depth.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>

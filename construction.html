@@ -3,71 +3,484 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Engineering & Craft — Aurelia Estates</title>
-  <meta name="description" content="Structural rigor, seismic engineering, and bespoke material curation.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FBFBF9'/><circle cx='16' cy='16' r='12' stroke='%23C5A059' stroke-width='2' fill='none'/><text x='16' y='21' font-family='serif' font-size='14' text-anchor='middle' fill='%23C5A059'>A</text></svg>">
+  <title>Engineering & Structural Physics — Aurelia Estates</title>
+  <meta name="description" content="Structural rigor, seismic engineering, acoustic isolation, and bespoke European material curation for ultra-luxury residences.">
+  <meta name="keywords" content="luxury estate construction, seismic engineering, post-tensioned slabs, acoustic isolation, travertine facade, basalt micro-piling">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Engineering & Structural Physics — Aurelia Estates">
+  <meta property="og:description" content="Beneath every surface of honed travertine lies uncompromising structural engineering designed for centuries.">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Aurelia Estates Structural Engineering & Craftsmanship Standards",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Aurelia Estates",
+      "url": "https://aureliaestates.com"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23FAF8F5'/><circle cx='16' cy='16' r='12' stroke='%23C5A880' stroke-width='2' fill='none'/><text x='16' y='21' font-family='serif' font-size='14' text-anchor='middle' fill='%23C5A880'>A</text></svg>">
   <link rel="stylesheet" href="src/styles/theme.css">
 </head>
 <body>
+  <!-- Ambient 3D Axonometric Canvas -->
+  <canvas id="architectural-canvas" class="ambient-3d-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Dispatch Bar -->
+  <div style="background: var(--color-charcoal); color: var(--color-ivory); padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid var(--color-border-gold);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 7px; height: 7px; background: var(--color-champagne); border-radius: 50%;"></span>
+        <span style="font-family: var(--font-sans); letter-spacing: 0.04em;">STRUCTURAL PHYSICS</span> &bull; Zone IV Seismic Code &bull; NC-18 Acoustic Standard
+      </div>
+      <div>
+        <a href="properties.html" style="color: var(--color-champagne); text-decoration: none; margin-right: 16px; font-weight: 500;">View Portfolio &rarr;</a>
+        Concierge: <a href="tel:+918069804400" style="color: #FFF; text-decoration: none; font-weight: 500;">+91 80 6980 4400</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo"><div class="brand-symbol">A</div><div class="brand-title">Aurelia Estates</div></a>
-      <nav><ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="properties.html" class="nav-link">Portfolio</a></li>
-        <li><a href="residential.html" class="nav-link">Residential</a></li>
-        <li><a href="commercial.html" class="nav-link">Commercial</a></li>
-        <li><a href="construction.html" class="nav-link active">Engineering</a></li>
-        <li><a href="process.html" class="nav-link">Process</a></li>
-        <li><a href="insights.html" class="nav-link">Journal</a></li>
-        <li><a href="contact.html" class="nav-link">Ateliers</a></li>
-      </ul></nav>
-      <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 20px;">Private Viewing</a>
+      <a href="index.html" class="brand-logo" aria-label="Aurelia Estates Home">
+        <div class="brand-symbol">A</div>
+        <div>
+          <div class="brand-title">Aurelia Estates</div>
+          <div style="font-size: 0.68rem; color: var(--color-stone); letter-spacing: 0.12em; text-transform: uppercase;">Private Residences &bull; Ateliers</div>
+        </div>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="properties.html" class="nav-link">Portfolio</a></li>
+          <li><a href="featured-property.html" class="nav-link">The Sanctuary</a></li>
+          <li><a href="residential.html" class="nav-link">Residential</a></li>
+          <li><a href="commercial.html" class="nav-link">Penthouses</a></li>
+          <li><a href="construction.html" class="nav-link active">Engineering</a></li>
+          <li><a href="process.html" class="nav-link">Process</a></li>
+          <li><a href="insights.html" class="nav-link">Journal</a></li>
+          <li><a href="contact.html" class="nav-link">Ateliers</a></li>
+        </ul>
+      </nav>
+      <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 22px; font-size: 0.8rem;">Private Viewing</a>
     </div>
   </header>
 
   <main style="padding-top: calc(var(--header-height) + 48px); padding-bottom: 96px;">
     <div class="container">
-      <div style="max-width: 820px; margin-bottom: 64px;">
-        <span class="eyebrow">Structural Integrity</span>
-        <h1>Engineering the Indestructible</h1>
-        <p style="font-size: 1.15rem; color: var(--color-muted); line-height: 1.7;">
-          Beneath every surface of honed limestone lies uncompromising structural engineering. We design for centuries, not warranty cycles.
+      <!-- Breadcrumb & Header -->
+      <div style="max-width: 880px; margin-bottom: 48px;">
+        <span class="eyebrow" style="color: var(--color-bronze); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;">STRUCTURAL RIGOR & METROLOGY</span>
+        <h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.6rem); color: var(--color-charcoal); line-height: 1.15; margin: 12px 0 20px;">
+          Engineering the Indestructible
+        </h1>
+        <p style="font-size: 1.15rem; color: var(--color-stone); line-height: 1.8; max-width: 760px;">
+          Beneath every surface of hand-honed travertine and oiled walnut lies uncompromising structural physics. We engineer for multi-generational permanence, seismic resilience, and acoustic silence.
         </p>
       </div>
 
-      <div class="grid-3">
-        <div class="estate-card">
-          <span class="property-badge">STRUCTURAL</span>
-          <h3>Post-Tensioned Slabs</h3>
-          <p style="font-size: 0.85rem; color: var(--color-muted); margin-top: 8px;">
-            Eliminating intermediate support columns to create dramatic 18-meter uninterrupted living vistas and soaring ceiling envelopes.
-          </p>
+      <!-- KPI Ribbon (Animated) -->
+      <div class="kpi-ribbon" style="margin-bottom: 64px;">
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="450" data-suffix="mm">450mm</div>
+          <div class="kpi-label">Basalt Cavity Wall Depth</div>
         </div>
-        <div class="estate-card">
-          <span class="property-badge">GEOTECHNICAL</span>
-          <h3>Deep Foundation Piling</h3>
-          <p style="font-size: 0.85rem; color: var(--color-muted); margin-top: 8px;">
-            Micro-piled directly into basalt bedrocks, isolated against ground vibration and certified under Zone II+ seismic resistance codes.
-          </p>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="4" data-prefix="Zone " data-suffix="+">Zone 4+</div>
+          <div class="kpi-label">Seismic Certification</div>
         </div>
-        <div class="estate-card">
-          <span class="property-badge">ACOUSTICS</span>
-          <h3>NC-20 Sound Attenuation</h3>
-          <p style="font-size: 0.85rem; color: var(--color-muted); margin-top: 8px;">
-            Decoupled wall cavities, triple-glazed acoustic laminates, and silent gravity-fed HVAC plenums achieving library-level quietness.
-          </p>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="18" data-prefix="NC-">NC-18</div>
+          <div class="kpi-label">Library Acoustic Attenuation</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-value" data-counter="100" data-suffix="+ Yrs">100+ Yrs</div>
+          <div class="kpi-label">Structural Design Horizon</div>
+        </div>
+      </div>
+
+      <!-- Interactive Structural Matrix Switcher -->
+      <section style="margin-bottom: 80px;">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: var(--color-bronze); font-weight: 600; text-transform: uppercase;">PHYSICAL SPECIFICATIONS</span>
+          <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--color-charcoal); margin-top: 8px;">
+            The Anatomy of Structural Permanence
+          </h2>
+          <p style="color: var(--color-stone); font-size: 0.95rem;">Select an architectural subsystem to inspect engineering cross-sections and quality verifications.</p>
+        </div>
+
+        <div class="tech-switcher">
+          <div class="switcher-nav">
+            <button class="switcher-btn active" data-target="system-piling">01 Foundation & Basalt Micro-Piling</button>
+            <button class="switcher-btn" data-target="system-slabs">02 Post-Tensioned 18m Slabs</button>
+            <button class="switcher-btn" data-target="system-acoustics">03 NC-18 Decoupled Acoustics</button>
+            <button class="switcher-btn" data-target="system-envelope">04 Geothermal Thermal Envelope</button>
+          </div>
+
+          <div class="switcher-content">
+            <!-- System 1 -->
+            <div class="switcher-panel active" id="system-piling">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: gap;">
+                <div>
+                  <span style="background: rgba(197, 168, 128, 0.15); color: var(--color-bronze); padding: 4px 10px; font-size: 0.75rem; border-radius: 4px; font-weight: 600;">GEOTECHNICAL RIGOR</span>
+                  <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin-top: 8px;">Subsurface Basalt Micro-Piling</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-piling" style="padding: 8px 16px; font-size: 0.8rem;">View Full Structural Dossier &rarr;</button>
+              </div>
+              <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 24px;">
+                Every Aurelia foundation is anchored directly into unweathered granite or basalt bedrock using precision bored micro-piles socketed up to 28 meters deep. This eliminates settlement variance and guarantees complete isolation from urban transit vibrations.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Concrete Grade</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">M70 Self-Compacting</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Reinforcement Steel</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">Fe-550D Corrosion Proof</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Bedrock Socket Depth</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">6.0m Basalt Penetration</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- System 2 -->
+            <div class="switcher-panel" id="system-slabs">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: gap;">
+                <div>
+                  <span style="background: rgba(197, 168, 128, 0.15); color: var(--color-bronze); padding: 4px 10px; font-size: 0.75rem; border-radius: 4px; font-weight: 600;">SPAN MASTERY</span>
+                  <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin-top: 8px;">Post-Tensioned 18m Column-Free Vistas</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-piling" style="padding: 8px 16px; font-size: 0.8rem;">View Engineering Calcs &rarr;</button>
+              </div>
+              <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 24px;">
+                Uninterrupted floor-to-ceiling glass expanses require zero visible interior support columns. High-tensile bonded tendon cables are stressed to 1,860 MPa after concrete curing, allowing dramatic architectural cantilevers of up to 7.5 meters over garden terraces.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Unbroken Room Span</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">18.4 Meters Clear</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Deflection Limit</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">L / 1200 (Imperceptible)</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Cantilever Overhang</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">7.5m Floating Balcony</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- System 3 -->
+            <div class="switcher-panel" id="system-acoustics">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: gap;">
+                <div>
+                  <span style="background: rgba(197, 168, 128, 0.15); color: var(--color-bronze); padding: 4px 10px; font-size: 0.75rem; border-radius: 4px; font-weight: 600;">SONIC PURITY</span>
+                  <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin-top: 8px;">NC-18 Decoupled Acoustic Chambering</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-glazing" style="padding: 8px 16px; font-size: 0.8rem;">View Acoustic Report &rarr;</button>
+              </div>
+              <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 24px;">
+                Silence is the ultimate luxury in dense metropolitan hubs. Aurelia isolates living and sleeping quarters using decoupled staggered-stud wall partitions, elastomeric floor underlayments, and acoustic baffles in all ducted climate returns.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Interior Ambient Noise</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">&le; 24 dBA (Whisper Quiet)</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Glazing Sound Transmission</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">STC 52 Certified</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Floor Impact Sound</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">IIC 64 Heavy Footfall</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- System 4 -->
+            <div class="switcher-panel" id="system-envelope">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: gap;">
+                <div>
+                  <span style="background: rgba(197, 168, 128, 0.15); color: var(--color-bronze); padding: 4px 10px; font-size: 0.75rem; border-radius: 4px; font-weight: 600;">PASSIVE CLIMATE</span>
+                  <h3 style="font-family: var(--font-display); font-size: 1.6rem; color: var(--color-charcoal); margin-top: 8px;">Geothermal Thermal Mass & Microclimates</h3>
+                </div>
+                <button class="btn btn-outline" data-modal="modal-glazing" style="padding: 8px 16px; font-size: 0.8rem;">View Energy Envelope &rarr;</button>
+              </div>
+              <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 24px;">
+                450mm cavity walls featuring double-skin natural limestone, aerated mineral insulation, and ventilated air channels buffer against extreme tropical summer heat waves. Natural cross-ventilation flues and deep verandas cut mechanical cooling energy by 52%.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Cavity Wall U-Value</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">0.28 W/m&sup2;K Superior</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">Glazing Solar Heat Gain</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">SHGC 0.22 Low-E</div>
+                </div>
+                <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; border-left: 3px solid var(--color-bronze);">
+                  <div style="font-size: 0.75rem; color: var(--color-stone); text-transform: uppercase;">HVAC Load Reduction</div>
+                  <div style="font-size: 1.15rem; font-weight: 600; color: var(--color-charcoal); margin-top: 4px;">-52% Baseline Demand</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 Technical Disciplines Grid (3D Tilt Cards) -->
+      <section style="margin-bottom: 80px;">
+        <div style="margin-bottom: 36px;">
+          <span style="font-size: 0.78rem; letter-spacing: 0.12em; color: var(--color-bronze); font-weight: 600; text-transform: uppercase;">DISCIPLINARY EXCELLENCE</span>
+          <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--color-charcoal); margin-top: 8px;">
+            The Six Pillars of Aurelia Craftsmanship
+          </h2>
+        </div>
+
+        <div class="grid-3">
+          <div class="estate-card tilt-card" data-modal="modal-piling">
+            <span class="property-badge">STRUCTURAL</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--color-charcoal); margin: 12px 0 8px;">Seismic Zone 4+ Armor</h3>
+            <p style="font-size: 0.88rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              Elastomeric base-isolation bearings and ductile shear core framing engineered to resist peak ground accelerations without hairline plaster cracks.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Base Isolation</span>
+              <span class="chip">Ductile Cores</span>
+            </div>
+            <a href="javascript:void(0)" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Inspect Calcs &rarr;</a>
+          </div>
+
+          <div class="estate-card tilt-card" data-modal="modal-glazing">
+            <span class="property-badge">CURTAIN WALLS</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--color-charcoal); margin: 12px 0 8px;">Triple-Glazed Acoustic Glass</h3>
+            <p style="font-size: 0.88rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              Motorized concealed Swiss profiles with argon-filled acoustic interlayers, ceramic frit sunshading, and hurricane wind-load resistance.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Argon Gas 16mm</span>
+              <span class="chip">Schüco Motorized</span>
+            </div>
+            <a href="javascript:void(0)" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Inspect Glazing &rarr;</a>
+          </div>
+
+          <div class="estate-card tilt-card">
+            <span class="property-badge">MATERIALITY</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--color-charcoal); margin: 12px 0 8px;">European Stone Curation</h3>
+            <p style="font-size: 0.88rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              Single-quarry Tuscan Travertine, Statuario Marble, and Portuguese Moleanos Limestone booked-matched with tolerance down to 0.5mm.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Single-Vein Match</span>
+              <span class="chip">CNC 5-Axis</span>
+            </div>
+            <a href="process.html" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">View Quarry Journey &rarr;</a>
+          </div>
+
+          <div class="estate-card tilt-card">
+            <span class="property-badge">SECURITY</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--color-charcoal); margin: 12px 0 8px;">Biometric Vault & Safe Room</h3>
+            <p style="font-size: 0.88rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              Reinforced ballistic steel enclosures, independent emergency oxygen filtration, standalone satellite telemetry, and dual-redundant backup power.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">UL Class 3 Vault</span>
+              <span class="chip">Autonomous Air</span>
+            </div>
+            <a href="private-office.html" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Private Office &rarr;</a>
+          </div>
+
+          <div class="estate-card tilt-card">
+            <span class="property-badge">CLIMATE</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--color-charcoal); margin: 12px 0 8px;">Radiant Cooling & HEPA-14</h3>
+            <p style="font-size: 0.88rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              Chilled water ceiling capillary mats delivering draft-free, silent temperature control alongside surgical-grade MERV-16 / HEPA air ionization.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">Zero Drafts</span>
+              <span class="chip">HEPA-14 Clean Air</span>
+            </div>
+            <a href="contact.html" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Request Specs &rarr;</a>
+          </div>
+
+          <div class="estate-card tilt-card">
+            <span class="property-badge">SUSTAINABILITY</span>
+            <h3 style="font-family: var(--font-display); font-size: 1.35rem; color: var(--color-charcoal); margin: 12px 0 8px;">Microgrid & Water Autonomy</h3>
+            <p style="font-size: 0.88rem; color: var(--color-stone); line-height: 1.7; margin-bottom: 16px;">
+              Integrated solar BIPV glass tiles, 120 kWh lithium-iron storage banks, and closed-loop rainwater recycling providing 90 days of complete off-grid autonomy.
+            </p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;">
+              <span class="chip">120 kWh Battery</span>
+              <span class="chip">90-Day Water</span>
+            </div>
+            <a href="contact.html" style="color: var(--color-bronze); font-size: 0.85rem; font-weight: 600; text-decoration: none;">Learn More &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Inspection Banner CTA -->
+      <div style="background: var(--color-charcoal); color: var(--color-ivory); border-radius: 12px; padding: 48px; border: 1px solid var(--color-border-gold); text-align: center; max-width: 860px; margin: 0 auto;">
+        <span style="color: var(--color-champagne); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600;">CONFIDENTIAL SITE AUDIT</span>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; margin: 12px 0 16px; color: #FFF;">
+          Inspect Active Construction in Person
+        </h2>
+        <p style="color: var(--color-ivory-dim); max-width: 600px; margin: 0 auto 28px; line-height: 1.7; font-size: 0.95rem;">
+          We welcome prospective owners, structural consultants, and family office engineers to walk our active foundation and structural framework sites.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="schedule-visit.html" class="btn btn-gold" style="padding: 12px 28px;">Schedule Site Audit</a>
+          <a href="request-brochure.html" class="btn btn-outline" style="color: var(--color-ivory); border-color: rgba(255,255,255,0.3); padding: 12px 28px;">Request Engineering Blueprints</a>
         </div>
       </div>
     </div>
   </main>
 
+  <!-- Modals -->
+  <!-- Modal 1: Structural Engineering Dossier -->
+  <div class="modal-overlay" id="modal-piling" role="dialog" aria-modal="true" aria-labelledby="modal-piling-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: var(--color-bronze); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">GEOTECHNICAL SPECIFICATION</span>
+          <h3 id="modal-piling-title" style="font-family: var(--font-display); font-size: 1.5rem; color: var(--color-charcoal); margin-top: 4px;">Basalt Piling & Seismic Damper Calcs</h3>
+        </div>
+        <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 20px;">
+          All foundations utilize hydraulic rotary bored piling into unweathered Archean Peninsular Gneiss and Deccan Basalt. Sonic Logging (CSL) and Pile Integrity Tests (PIT) are conducted on 100% of cast piles.
+        </p>
+        <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-bottom: 24px;">
+          <thead>
+            <tr style="background: var(--color-cream); text-align: left;">
+              <th style="padding: 10px; border-bottom: 1px solid var(--border-subtle);">Parameter</th>
+              <th style="padding: 10px; border-bottom: 1px solid var(--border-subtle);">Specification Standard</th>
+              <th style="padding: 10px; border-bottom: 1px solid var(--border-subtle);">Verification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-subtle); font-weight: 500;">Pile Diameter</td>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-subtle);">800mm to 1200mm</td>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-subtle); color: var(--color-bronze);">Laser Caliper Calibrated</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-subtle); font-weight: 500;">Concrete Compressive Strength</td>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-subtle);">70 N/mm&sup2; at 28 Days</td>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-subtle); color: var(--color-bronze);">Cube Crush Tested</td>
+            </tr>
+            <tr>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-subtle); font-weight: 500;">Seismic Ground Acceleration</td>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-subtle);">PGA = 0.36g Design Basis</td>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-subtle); color: var(--color-bronze);">ETABS FEA 3D Model</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="text-align: right;">
+          <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.85rem;">Request Full PDF Dossier</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Acoustic & Glazing Dossier -->
+  <div class="modal-overlay" id="modal-glazing" role="dialog" aria-modal="true" aria-labelledby="modal-glazing-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.75rem; color: var(--color-bronze); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;">ACOUSTIC TESTING SUMMARY</span>
+          <h3 id="modal-glazing-title" style="font-family: var(--font-display); font-size: 1.5rem; color: var(--color-charcoal); margin-top: 4px;">Schüco Motorized Glazing & dB Damping</h3>
+        </div>
+        <button class="modal-close" data-close-modal aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--color-stone); line-height: 1.8; margin-bottom: 20px;">
+          Tested in acoustic chamber labs in Rosenheim, Germany, our facade packages achieve a Sound Transmission Class (STC) rating of 52, reducing 85 dBA urban road noise down to ambient whispers under 28 dBA indoors.
+        </p>
+        <div style="background: var(--color-cream); padding: 16px; border-radius: 8px; margin-bottom: 20px;">
+          <div style="font-weight: 600; color: var(--color-charcoal); margin-bottom: 8px;">Glass Composition (Outside to Inside):</div>
+          <div style="font-size: 0.85rem; color: var(--color-stone); line-height: 1.6;">
+            &bull; 10mm Extra-Clear Low-Iron Toughened<br>
+            &bull; 1.52mm Acoustic PVB Interlayer (Acoustic Silence)<br>
+            &bull; 16mm Warm-Edge Spacer filled with 95% Pure Argon Gas<br>
+            &bull; 8mm Low-E Thermal Control Laminated Glass
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <a href="schedule-visit.html" class="btn btn-gold" style="padding: 10px 20px; font-size: 0.85rem;">Book Glazing Acoustic Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
   <footer class="site-footer">
-    <div class="container footer-bottom">
-      <div>&copy; 2026 Aurelia Estates & Architecture Ltd. Discretion Guaranteed.</div>
-      <div style="color: var(--color-gold);">ScaleNova EliteOS Demo Platform</div>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-symbol">A</div>
+            <div>
+              <div class="brand-title">Aurelia Estates</div>
+              <div style="font-size: 0.65rem; color: var(--color-stone); letter-spacing: 0.12em; text-transform: uppercase;">Private Residences &bull; Ateliers</div>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--color-stone); line-height: 1.8; max-width: 320px;">
+            Crafting enduring architectural landmarks of quiet dignity, natural stone permanence, and acoustic sanctuary.
+          </p>
+        </div>
+        <div>
+          <h4 style="color: var(--color-charcoal); font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-display);">Portfolio</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-stone);">
+            <li><a href="properties.html" style="color: inherit; text-decoration: none;">All Properties</a></li>
+            <li><a href="featured-property.html" style="color: inherit; text-decoration: none;">The Sanctuary Penthouse</a></li>
+            <li><a href="residential.html" style="color: inherit; text-decoration: none;">Residential Compounds</a></li>
+            <li><a href="commercial.html" style="color: inherit; text-decoration: none;">Corporate Ateliers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--color-charcoal); font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-display);">Craft & Rigor</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-stone);">
+            <li><a href="about.html" style="color: inherit; text-decoration: none;">Architectural Philosophy</a></li>
+            <li><a href="construction.html" style="color: inherit; text-decoration: none;">Engineering Rigor</a></li>
+            <li><a href="process.html" style="color: inherit; text-decoration: none;">Acquisition Process</a></li>
+            <li><a href="insights.html" style="color: inherit; text-decoration: none;">Architectural Journal</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: var(--color-charcoal); font-size: 0.95rem; margin-bottom: 16px; font-family: var(--font-display);">Concierge</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem; color: var(--color-stone);">
+            <li><a href="schedule-visit.html" style="color: inherit; text-decoration: none;">Private Viewing</a></li>
+            <li><a href="private-office.html" style="color: inherit; text-decoration: none;">Private Family Office</a></li>
+            <li><a href="request-brochure.html" style="color: inherit; text-decoration: none;">Request Monograph</a></li>
+            <li><a href="sitemap.xml" style="color: inherit; text-decoration: none;">XML Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid var(--border-subtle); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--color-stone-light); flex-wrap: wrap; gap: 12px;">
+        <div>&copy; 2026 Aurelia Estates. ScaleNova Systems EliteOS Client Platform.</div>
+        <div>Ateliers: Mumbai &bull; Bangalore &bull; Hyderabad &bull; Goa &bull; Dubai</div>
+      </div>
     </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="src/components/floorplan-depth.js"></script>
+  <script src="src/components/modal-controller.js"></script>
+  <script src="src/components/visual-infographics.js"></script>
 </body>
 </html>
