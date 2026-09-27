@@ -12,3 +12,6 @@ DEMO_ID = "DEMO-03"
 CLIENT_NAME = "Aurelia Estates"
 INDUSTRY = "Real Estate & Construction"
 PRIMARY_DOMAIN = "demo3.scalenovasys.com"
+
+workers_dev = true
+

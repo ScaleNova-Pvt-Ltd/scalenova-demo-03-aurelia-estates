@@ -13,12 +13,23 @@
     const ctx = canvas.getContext('2d');
     let width = 0;
     let height = 0;
+    let dpr = 1;
     const mouse = { x: 0.5, y: 0.5, targetX: 0.5, targetY: 0.5 };
     let time = 0;
+    let isVisible = true;
+    let animId = null;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function resize() {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
 
     window.addEventListener('resize', resize, { passive: true });
@@ -26,6 +37,13 @@
       mouse.targetX = e.clientX / window.innerWidth;
       mouse.targetY = e.clientY / window.innerHeight;
     }, { passive: true });
+
+    document.addEventListener('visibilitychange', () => {
+      isVisible = !document.hidden;
+      if (isVisible && !animId && !prefersReducedMotion) {
+        animate();
+      }
+    });
 
     function drawAxonometricPlanes() {
       const cx = width * 0.75;
@@ -90,16 +108,26 @@
     }
 
     function animate() {
+      if (!isVisible) {
+        animId = null;
+        return;
+      }
       mouse.x += (mouse.targetX - mouse.x) * 0.05;
       mouse.y += (mouse.targetY - mouse.y) * 0.05;
       time += 1;
 
       drawAxonometricPlanes();
-      requestAnimationFrame(animate);
+
+      if (!prefersReducedMotion) {
+        animId = requestAnimationFrame(animate);
+      }
     }
 
     resize();
-    animate();
+    drawAxonometricPlanes();
+    if (!prefersReducedMotion) {
+      animate();
+    }
   }
 
   if (document.readyState === 'loading') {
